@@ -9,12 +9,12 @@
   letter-spacing: 3px;
 }
 
-#yellow-block {
+#cursor {
   position: absolute;
   margin-top: 3px;
   width: 18px;
   height: 27px;
-  background-color: yellow;
+  background-color:rgba(255, 0, 0, 0.3);
   margin-left: 0px;
   left: 12px;
   padding-left: 0px;
@@ -22,7 +22,12 @@
   margin-right: 0px;
   right: 0px;
 }
-
+.well{
+  color: #ff0000;
+  background-color: #000;
+  -webkit-box-shadow: inset 3px -3px 3px #ff0000;
+  box-shadow: inset 3px -3px 3px #ff0000;
+}
 .keyboard-container {
   margin-top: 200px;
 }
@@ -48,5 +53,10 @@
 }
 
 .keypress{
-  background-color: blue;
+  background: #ff0000;
+  background: -webkit-gradient(#000, rgba(201, 21, 21, 0.94), #ff0000);
+  background: -o-radial-gradient(#000, rgba(201, 21, 21, 0.94), #ff0000);
+  background: -moz-radial-gradient(#000, rgba(201, 21, 21, 0.94), #ff0000);
+  background: radial-gradient(#000, rgba(201, 21, 21, 0.94), #ff0000);
+  /*background-color: blue;*/
 }
