@@ -1,4 +1,6 @@
 # Lab 05: Just My Type
+## [Demo Link](https://smithbrandon.github.io/Covalence-Lab-05/)
+
 ## Due: Monday, May 5th
 ##### Covalence 
 ###### Full Stack: Summer 2017
