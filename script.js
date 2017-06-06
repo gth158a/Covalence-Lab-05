@@ -27,6 +27,7 @@ function checkLetter(){                                             //Check to s
         error++;
     }
     $('#cursor').animate({'left': '+=17.4px'},100);
+    $('#target-letter').text(sentences[line][counter + 1]);
 }
 
 $(document).keypress(function(e){
@@ -49,12 +50,15 @@ $(document).keypress(function(e){
             init(false);
         }else {
             $('.key').removeClass('keypress');
-            var again = confirm('You typed '+ getWPM() + ' wpm.  Would you like to try again?');
-            if (again) {
-                init(true);
-            } else {
-                gameOver = true;
-            }
+            $('#feedback').text('You typed ' + getWPM() + ' wpm.  Great Job!');
+            setTimeout(function(){
+                var again = confirm('Would you like to try again?');
+                if (again) {
+                    init(true);
+                } else {
+                    gameOver = true;
+                }
+            },2000);
         }
     }
 })
@@ -82,7 +86,8 @@ function init(restart){
         gameOver = false;
     }
     counter = 0;
-    $('#sentence').text(sentences[line]);                       //go to new word
+    $('#sentence').text(sentences[line]);   
+    $('#target-letter').text(sentences[line][0]);                    //go to new word
     $('#feedback').empty();                                     //Clear out check marks
     $('#cursor').animate({'left': '12px'});               //Return cursor to start
 }
